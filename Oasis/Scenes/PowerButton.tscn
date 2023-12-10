@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxpsn252hd8c4"]
+
+[ext_resource type="Script" path="res://Scripts/PowerButton.gd" id="1_6srxk"]
+[ext_resource type="Texture2D" uid="uid://d3vcashnhp1c7" path="res://Textures/Button.png" id="2_1blld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebhv1"]
+size = Vector2(24, 52)
+
+[node name="PowerButton" type="Area2D" groups=["Button"]]
+script = ExtResource("1_6srxk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1blld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 0)
+shape = SubResource("RectangleShape2D_ebhv1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxn5gvq5submd"]
+
+[ext_resource type="Texture2D" uid="uid://ckp0u0kx1sx2p" path="res://Textures/TitleBackground.png" id="1_i1man"]
+[ext_resource type="Texture2D" uid="uid://d3vcashnhp1c7" path="res://Textures/Button.png" id="2_uugo1"]
+[ext_resource type="Script" path="res://Scripts/BackButton.gd" id="3_nbxe2"]
+
+[node name="Instructions" type="Node2D"]
+
+[node name="TitleBackground" type="Sprite2D" parent="."]
+position = Vector2(606, 399)
+scale = Vector2(22.2244, 16.6016)
+texture = ExtResource("1_i1man")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 273.0
+offset_bottom = 37.0
+scale = Vector2(3.78447, 2.93597)
+text = "Get to all three buttons to escape!"
+
+[node name="Button" type="Sprite2D" parent="."]
+position = Vector2(1091, 47)
+texture = ExtResource("2_uugo1")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 109.0
+offset_top = 251.0
+offset_right = 372.0
+offset_bottom = 277.0
+scale = Vector2(3.78447, 2.93597)
+text = "A - Walk Left"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 547.0
+offset_top = 247.0
+offset_right = 810.0
+offset_bottom = 273.0
+scale = Vector2(3.78447, 2.93597)
+text = "D - Walk Right"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 326.0
+offset_right = 361.0
+offset_bottom = 352.0
+scale = Vector2(3.78447, 2.93597)
+text = "Space - Jump"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 530.0
+offset_top = 335.0
+offset_right = 793.0
+offset_bottom = 361.0
+scale = Vector2(3.78447, 2.93597)
+text = "Left Click - Fire Bullet"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 68.0
+offset_top = 122.0
+offset_right = 338.0
+offset_bottom = 148.0
+scale = Vector2(3.78447, 2.93597)
+text = "Avoid/Defeat Dark Sand Creatures!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 536.0
+offset_right = 49.0
+offset_bottom = 567.0
+scale = Vector2(3.42413, 3.54618)
+text = "Back"
+script = ExtResource("3_nbxe2")
+
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]
